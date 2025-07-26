@@ -1,5 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
+import { emailjsConfig } from '@/config/emailjs'
 const currentYear = new Date().getFullYear()
 
 const socialLinks = [
@@ -114,7 +115,9 @@ const socialLinks = [
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <span class="text-gray-600 dark:text-gray-400">ebukareed@gmail.com</span>
+              <span class="text-gray-600 dark:text-gray-400">{{
+                emailjsConfig.recipientEmail
+              }}</span>
             </li>
             <li class="flex items-start">
               <svg
@@ -137,7 +140,7 @@ const socialLinks = [
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              <span class="text-gray-600 dark:text-gray-400">Lagos,Nigeria</span>
+              <span class="text-gray-600 dark:text-gray-400">Lagos, Nigeria</span>
             </li>
           </ul>
         </div>
