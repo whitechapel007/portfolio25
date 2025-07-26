@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import { emailjsConfig } from '@/config/emailjs'
+import { emailjsConfig } from '../config/emailjs'
 const currentYear = new Date().getFullYear()
 
 const socialLinks = [
