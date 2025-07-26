@@ -231,7 +231,7 @@ onMounted(() => {
                   </div>
                   <div class="ml-4">
                     <p class="text-base font-medium text-white">Email</p>
-                    <p class="text-gray-400">ebukareed@gmail.com</p>
+                    <p class="text-gray-400">{{ emailjsConfig.recipientEmail }}</p>
                   </div>
                 </div>
 
