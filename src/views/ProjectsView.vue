@@ -33,7 +33,7 @@ const projects: Project[] = [
       "A full-stack social media platform replicating Twitter's core features including user authentication, tweet composition, real-time timeline updates, user profiles, and follow/unfollow functionality using modern web technologies.",
     image: '/tw.png',
     technologies: ['Nuxt.js', 'Prisma', 'Mongodb'],
-    link: 'https://twitter-clone-sooty-eta.vercel.app/',
+    link: 'https://twitter-clone-2b3kjqu5u-whitechapel007s-projects.vercel.app',
     category: 'web',
     github: '#',
   },
@@ -124,7 +124,7 @@ const projects: Project[] = [
     image: '/jump.png',
     technologies: ['React.js'],
     category: 'web',
-    link: 'https://frontend.streamjump.info/onboarding',
+    link: 'https://staging.d1ljw0q4obq0ie.amplifyapp.com/login',
     github: '#',
   },
   {
