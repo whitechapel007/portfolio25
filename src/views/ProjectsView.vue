@@ -17,7 +17,19 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
+    title: 'Chat App (PERN Stack)',
+    description:
+      'A modern chat application built with React.js featuring real-time messaging, user authentication, group chats and media sharing.',
+    image: '/chat.png',
+    technologies: ['React.js', 'Node.js', 'Prisma', 'Postgresql', 'websockets', 'express'],
+    link: 'https://chat-app-pern-apmb.onrender.com/',
+    category: 'web',
+    github: '#',
+  },
+
+  {
+    id: 2,
+    title: 'E-Commerce Platform (Vue.js)',
     description:
       'A modern e-commerce solution built with Vue.js featuring product catalog, shopping cart, user authentication, and secure payment integration. Includes admin dashboard for inventory management and order tracking.',
     image: '/e-comm.png',
@@ -27,7 +39,7 @@ const projects: Project[] = [
     github: '#',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Twitter Clone',
     description:
       "A full-stack social media platform replicating Twitter's core features including user authentication, tweet composition, real-time timeline updates, user profiles, and follow/unfollow functionality using modern web technologies.",
@@ -38,7 +50,7 @@ const projects: Project[] = [
     github: '#',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Document Signing App',
     description:
       'A digital document management and e-signature platform built with React. Features PDF viewing, annotation tools, electronic signature capture, document sharing, and secure authentication for streamlined document workflows.',
@@ -49,7 +61,7 @@ const projects: Project[] = [
     github: '#',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Covenant Connect Website',
     description:
       'A comprehensive digital platform for a Christian organization featuring event management, community forums, resource sharing, and member engagement tools. Built with responsive design and modern UI/UX principles.',
@@ -61,7 +73,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: 'Beam Markets Website',
     description:
       'A professional financial services platform showcasing investment products, market analysis tools, and client portfolio management. Features real-time market data integration and responsive design for optimal user experience.',
@@ -72,7 +84,7 @@ const projects: Project[] = [
     github: '#',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Credpal Business Website',
     description:
       'A fintech business platform offering credit solutions and financial services for SMEs. Includes loan application workflows, business analytics dashboard, and secure payment processing with modern design aesthetics.',
@@ -83,7 +95,7 @@ const projects: Project[] = [
     github: '#',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Rapisurv AI',
     description:
       'An innovative real estate consulting platform powered by artificial intelligence. Features property valuation algorithms, market trend analysis, investment recommendations, and automated reporting for real estate professionals.',
@@ -95,7 +107,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 8,
+    id: 9,
     title: 'Korrency',
     description:
       'A comprehensive currency exchange platform featuring real-time exchange rates, embedded currency converter, multi-currency wallet management, and secure international money transfer capabilities with competitive rates.',
@@ -106,7 +118,7 @@ const projects: Project[] = [
     github: '#',
   },
   {
-    id: 9,
+    id: 10,
     title: 'Imalipay API Documentation',
     description:
       'A comprehensive API documentation platform for a fintech payment gateway. Features interactive API explorer, code examples, authentication guides, and developer resources built with Docusaurus for optimal developer experience.',
@@ -117,7 +129,7 @@ const projects: Project[] = [
     github: '#',
   },
   {
-    id: 10,
+    id: 11,
     title: 'Jump Social',
     description:
       'A dynamic social networking platform enabling content creators to connect, share, and monetize their content. Features user onboarding, content streaming, social interactions, and creator monetization tools with modern UI design.',
@@ -128,7 +140,7 @@ const projects: Project[] = [
     github: '#',
   },
   {
-    id: 11,
+    id: 12,
     title: 'Fitness Tracker',
     description:
       'A comprehensive mobile fitness application for tracking workouts, nutrition, and fitness progress. Features exercise logging, meal planning, progress analytics, social challenges, and personalized workout recommendations.',
