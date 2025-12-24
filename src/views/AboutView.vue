@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import gsap from 'gsap'
 import { onMounted } from 'vue'
+import Section from '../components/ui/Section.vue'
+import Card from '../components/ui/Card.vue'
 
 interface Experience {
   title: string
@@ -120,112 +122,97 @@ onMounted(() => {
   <div>
     <!-- About Section -->
     <main id="main-content">
-      <section class="section bg-black pt-32" role="main" aria-label="About section">
-        <div class="container mx-auto px-6">
-          <h1 class="about-title section-title text-white">About Me</h1>
-          <div class="about-line w-24 h-1 bg-[#00E0FF] mb-16"></div>
+      <Section title="About Me" bg-class="bg-black pt-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="about-content space-y-6">
+            <p class="text-lg text-white/80">
+              I'm a passionate full-stack developer with a focus on creating exceptional digital
+              experiences. With expertise in modern web and mobile technologies, I bring ideas to
+              life through clean, efficient, and maintainable code.
+            </p>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="about-content space-y-6">
-              <p class="text-lg text-white/80">
-                I'm a passionate full-stack developer with a focus on creating exceptional digital
-                experiences. With expertise in modern web and mobile technologies, I bring ideas to
-                life through clean, efficient, and maintainable code.
-              </p>
+            <p class="text-lg text-white/80">
+              My journey in software development began with a curiosity about how things work and a
+              desire to build solutions that make a difference. Today, I specialize in Vue.js,
+              Nuxt.js, React Native, Node.js, Express, and Docker, allowing me to deliver complete,
+              production-ready applications.
+            </p>
 
-              <p class="text-lg text-white/80">
-                My journey in software development began with a curiosity about how things work and
-                a desire to build solutions that make a difference. Today, I specialize in Vue.js,
-                Nuxt.js, React Native, Node.js, Express, and Docker, allowing me to deliver
-                complete, production-ready applications.
-              </p>
+            <p class="text-lg text-white/80">
+              I'm passionate about creating intuitive user interfaces, optimizing performance, and
+              implementing robust architectures. My approach combines technical expertise with a
+              deep understanding of user needs to deliver solutions that exceed expectations.
+            </p>
 
-              <p class="text-lg text-white/80">
-                I'm passionate about creating intuitive user interfaces, optimizing performance, and
-                implementing robust architectures. My approach combines technical expertise with a
-                deep understanding of user needs to deliver solutions that exceed expectations.
-              </p>
+            <p class="text-lg text-white/80">
+              When I'm not coding, you can find me exploring new technologies, contributing to
+              open-source projects, or sharing my knowledge through mentoring and community
+              engagement.
+            </p>
+          </div>
 
-              <p class="text-lg text-white/80">
-                When I'm not coding, you can find me exploring new technologies, contributing to
-                open-source projects, or sharing my knowledge through mentoring and community
-                engagement.
-              </p>
-            </div>
-
-            <div class="about-image relative">
-              <div class="relative z-10 border-2 border-[#00E0FF] rounded-lg p-1">
-                <div class="bg-gray-900 rounded-lg p-4">
-                  <div
-                    class="aspect-square rounded-lg overflow-hidden bg-gray-800 flex items-center justify-center"
-                  >
-                    <!-- Replace with your image -->
-                    <img src="/tc.png" alt="Ebuka" class="w-full h-full object-cover rounded-md" />
-                  </div>
+          <Card variant="bordered" class="about-image relative max-w-md mx-auto">
+            <div class="relative z-10 rounded-lg p-1">
+              <div class="rounded-lg p-4">
+                <div
+                  class="aspect-square rounded-lg overflow-hidden flex items-center justify-center"
+                >
+                  <img src="/tc.png" alt="Ebuka" class="w-full h-full object-cover rounded-md" />
                 </div>
               </div>
-
-              <!-- Decorative elements -->
-              <div
-                class="absolute top-1/4 -left-12 w-32 h-32 bg-[#00E0FF]/10 rounded-full blur-3xl"
-              ></div>
-              <div
-                class="absolute bottom-1/4 -right-12 w-40 h-40 bg-[#00E0FF]/5 rounded-full blur-3xl"
-              ></div>
             </div>
-          </div>
+
+            <!-- Decorative elements -->
+            <div
+              class="absolute top-1/4 -left-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-3xl"
+            ></div>
+            <div
+              class="absolute bottom-1/4 -right-12 w-40 h-40 bg-cyan-500/5 rounded-full blur-3xl"
+            ></div>
+          </Card>
         </div>
-      </section>
+      </Section>
 
       <!-- Experience & Education Section -->
-      <section class="section bg-black border-t border-gray-800 experience-section">
-        <div class="container mx-auto px-6">
-          <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
-            <div>
-              <h2 class="text-3xl md:text-4xl font-bold text-white">Experience & Education</h2>
-              <div class="w-24 h-1 bg-[#00E0FF] mt-4"></div>
+      <Section
+        title="Experience & Education"
+        subtitle="My professional journey and educational background"
+        bg-class="bg-black border-t border-gray-800"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <!-- Experience -->
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-8">Professional Experience</h3>
+
+            <div class="timeline space-y-8">
+              <div v-for="(exp, index) in experiences" :key="`exp-${index}`" class="timeline-item">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                  <h4 class="text-xl font-bold text-white">{{ exp.title }}</h4>
+                  <span class="text-sm font-medium text-[#00E0FF]">{{ exp.period }}</span>
+                </div>
+                <p class="text-lg text-[#00E0FF]/80 mb-2">{{ exp.company }}</p>
+                <p class="text-gray-400">{{ exp.description }}</p>
+              </div>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <!-- Experience -->
-            <div>
-              <h3 class="text-2xl font-bold text-white mb-8">Professional Experience</h3>
+          <!-- Education -->
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-8">Education</h3>
 
-              <div class="timeline space-y-8">
-                <div
-                  v-for="(exp, index) in experiences"
-                  :key="`exp-${index}`"
-                  class="timeline-item"
-                >
-                  <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                    <h4 class="text-xl font-bold text-white">{{ exp.title }}</h4>
-                    <span class="text-sm font-medium text-[#00E0FF]">{{ exp.period }}</span>
-                  </div>
-                  <p class="text-lg text-[#00E0FF]/80 mb-2">{{ exp.company }}</p>
-                  <p class="text-gray-400">{{ exp.description }}</p>
+            <div class="timeline space-y-8">
+              <div v-for="(edu, index) in education" :key="`edu-${index}`" class="timeline-item">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                  <h4 class="text-xl font-bold text-white">{{ edu.degree }}</h4>
+                  <span class="text-sm font-medium text-[#00E0FF]">{{ edu.period }}</span>
                 </div>
-              </div>
-            </div>
-
-            <!-- Education -->
-            <div>
-              <h3 class="text-2xl font-bold text-white mb-8">Education</h3>
-
-              <div class="timeline space-y-8">
-                <div v-for="(edu, index) in education" :key="`edu-${index}`" class="timeline-item">
-                  <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                    <h4 class="text-xl font-bold text-white">{{ edu.degree }}</h4>
-                    <span class="text-sm font-medium text-[#00E0FF]">{{ edu.period }}</span>
-                  </div>
-                  <p class="text-lg text-[#00E0FF]/80 mb-2">{{ edu.institution }}</p>
-                  <p class="text-gray-400">{{ edu.description }}</p>
-                </div>
+                <p class="text-lg text-[#00E0FF]/80 mb-2">{{ edu.institution }}</p>
+                <p class="text-gray-400">{{ edu.description }}</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </Section>
     </main>
   </div>
 </template>

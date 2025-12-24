@@ -2,7 +2,9 @@
 import emailjs from '@emailjs/browser'
 import gsap from 'gsap'
 import { onMounted, ref } from 'vue'
+import { EnvelopeIcon, MapPinIcon } from '@heroicons/vue/24/outline'
 import { emailjsConfig } from '../config/emailjs'
+import Button from '../components/ui/Button.vue'
 
 emailjs.init({
   publicKey: emailjsConfig.publicKey,
@@ -182,17 +184,9 @@ onMounted(() => {
               </div>
 
               <div class="pt-4">
-                <button
-                  type="submit"
-                  class="w-full btn flex items-center justify-center"
-                  :disabled="isSubmitting"
-                >
-                  <ArrowPathIcon
-                    v-if="isSubmitting"
-                    class="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
-                  />
+                <Button type="submit" :loading="isSubmitting" full-width>
                   {{ isSubmitting ? 'Sending...' : 'Send Message' }}
-                </button>
+                </Button>
               </div>
 
               <!-- Success message -->
